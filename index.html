@@ -1,133 +1,503 @@
 <!DOCTYPE html>
-<html lang="en">        <!-- Download C            <span class="feature-icon">🧠</span>A in Hero -->
-        <div class="hero-buttons">
-            <a class="btn-primary" href="langquest 0.0.0.exe" download>
-          🐸 Download Again
-        </a>   <a class="btn-primary" href="langquest 0.0.0.exe" download>
-            🐸 Download for Windows
-          </a>
-          <a class="btn-secondary" href="#features">Learn More</a>
-        </div>>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LangQuest - Master Any Language Naturally</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: #fff;
+      color: #222;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1a7f37;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #43b649;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+    
+    .logo-highlight {
+      color: #43b649;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #f8fff8 0%, #e8f5e9 100%);
+      padding: 60px 0;
+    }
+    
+    .hero-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .hero-text h1 {
+      font-size: 3.5rem;
+      margin-bottom: 16px;
+      color: #1a7f37;
+      line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.4rem;
+      color: #43b649;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    
+    .hero-description {
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      color: #444;
+    }
+    
+    .download-section-hero {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 16px rgba(67,182,73,0.1);
+      border: 2px solid #43b649;
+    }
+    
+    .download-section-hero h3 {
+      color: #1a7f37;
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(90deg, #43b649 0%, #1a7f37 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(67,182,73,0.2);
+      transition: all 0.3s ease;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #1a7f37 0%, #43b649 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(67,182,73,0.3);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: #43b649;
+      border: 2px solid #43b649;
+      border-radius: 8px;
+      padding: 12px 32px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .btn-secondary:hover {
+      background: #43b649;
+      color: white;
+    }
+    
+    .system-requirements {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e0f2e9;
+    }
+    
+    .system-requirements h4 {
+      color: #1a7f37;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    
+    .requirements-list {
+      list-style: none;
+    }
+    
+    .requirements-list li {
+      margin-bottom: 8px;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .requirements-list li::before {
+      content: "✅";
+      font-size: 14px;
+    }
+    
+    .features-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+    
+    .section-header {
+      margin-bottom: 48px;
+    }
+    
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: #1a7f37;
+      margin-bottom: 16px;
+    }
+    
+    .section-header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+    }
+    
+    .feature-card {
+      background: #f8fff8;
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid #e0f2e9;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(67,182,73,0.1);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    
+    .feature-card h3 {
+      color: #1a7f37;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+    
+    .feature-card p {
+      color: #444;
+      line-height: 1.6;
+    }
+    
+    .languages-section {
+      padding: 80px 0;
+      background: #f8fff8;
+    }
+    
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+    
+    .language-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      border: 2px solid #e0f2e9;
+      transition: all 0.3s ease;
+    }
+    
+    .language-card:hover {
+      border-color: #43b649;
+      transform: translateY(-2px);
+    }
+    
+    .language-flag {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    
+    .language-card h4 {
+      color: #1a7f37;
+      margin-bottom: 4px;
+    }
+    
+    .floating-mascot {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      font-size: 2rem;
+      background: #43b649;
+      color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(67,182,73,0.3);
+      padding: 16px;
+      z-index: 100;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .floating-mascot:hover {
+      transform: scale(1.1);
+    }
+    
+    footer {
+      background: #1a7f37;
+      color: #fff;
+      padding: 40px 0;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+    }
+    
+    .footer-section h4 {
+      margin-bottom: 16px;
+      color: #43b649;
+    }
+    
+    .footer-section p {
+      margin-bottom: 8px;
+      opacity: 0.9;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .languages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      
+      .floating-mascot {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <a href="#" class="logo">
-        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiM0Q0FGNTASCZ8L2NpcmNsZT4KPHN2Zz4K" alt="LangQuest Frog" class="logo-icon">
-        Lang<span class="logo-highlight">Quest</span>
-      </a>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <div class="logo-icon">🐸</div>
+          Lang<span class="logo-highlight">Quest</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <div class="hero-mascot">
-          🐸
-        </div>
-        <h1>Master Any Language Naturally</h1>
-        <p class="hero-subtitle">Fun. Fast. Froggishly Smart.</p>
-        <p class="hero-description">
-          Join millions learning languages through immersive conversations with our AI-powered frog companion. 
-          Experience the future of language learning with advanced React + TypeScript technology, 
-          lightning-fast Vite development, and intelligent ESLint code quality - all wrapped in a delightful learning experience.
-        </p>
-        
-        <!-- Download CTA in Hero -->
-        <div style="margin: 40px 0;">
-          <a class="btn-primary" href="langquest 0.0.0.exe" download>
-            � Download for Windows
-          </a>
-          <a class="btn-secondary" href="#features" style="margin-left: 15px;">Learn More</a>
-        </div>
-        
-        <div class="features">
-          <div class="feature-card">
-            <span class="feature-icon">🐸</span>
-            <h3>40+ Languages</h3>
-            <p>Learn from Spanish to Japanese, French to Arabic. Our AI frog supports a massive variety of languages with native-level conversations.</p>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Master Any Language Naturally</h1>
+            <p class="hero-subtitle">Fun. Fast. Froggishly Smart.</p>
+            <p class="hero-description">
+              Join millions learning languages through immersive conversations with our AI-powered frog companion. Experience the future of language learning with personalized lessons that adapt to your pace and style.
+            </p>
+            <a class="btn-secondary" href="#features">Explore Features</a>
           </div>
           
+          <div class="download-section-hero">
+            <h3>Download LangQuest</h3>
+            <p>Start your language learning journey today with our desktop application.</p>
+            
+            <a class="btn-primary" href="langquest 0.0.0.exe" download>
+              Download for Windows
+            </a>
+            
+            <div class="system-requirements">
+              <h4>System Requirements</h4>
+              <ul class="requirements-list">
+                <li><strong>OS:</strong> Windows 10/11</li>
+                <li><strong>RAM:</strong> 4GB minimum</li>
+                <li><strong>Storage:</strong> 200MB free space</li>
+                <li><strong>Internet:</strong> Required for AI features</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Powerful Learning Features</h2>
+          <p>Discover what makes LangQuest the most effective language learning platform</p>
+        </div>
+        
+        <div class="features-grid">
           <div class="feature-card">
-            <span class="feature-icon">�</span>
+            <span class="feature-icon"></span>
             <h3>AI-Powered Learning</h3>
-            <p>Smart learning algorithms adapt to your pace and style, providing personalized lessons and real-time feedback.</p>
+            <p>Our advanced artificial intelligence uses reinforcement learning techniques to create personalized lessons that adapt to your learning style, pace, and progress. Get real-time feedback and customized practice sessions.</p>
           </div>
           
           <div class="feature-card">
-            <span class="feature-icon">👥</span>
-            <h3>5M+ Users</h3>
-            <p>Join a thriving community of language learners worldwide. Practice with real scenarios and build confidence.</p>
+            <span class="feature-icon"></span>
+            <h3>Interactive Conversations</h3>
+            <p>Practice speaking and understanding through realistic conversation scenarios. Our AI companion provides instant feedback on pronunciation, grammar, and fluency to accelerate your learning process.</p>
           </div>
           
           <div class="feature-card">
-            <span class="feature-icon">📚</span>
-            <h3>Interactive Learning</h3>
-            <p>Engage with immersive conversation scenarios designed by language experts and powered by cutting-edge technology.</p>
+            <span class="feature-icon"></span>
+            <h3>Progress Tracking</h3>
+            <p>Monitor your learning journey with detailed analytics and progress reports. Track your vocabulary growth, conversation skills, and overall proficiency across all supported languages.</p>
+          </div>
+          
+          <div class="feature-card">
+            <span class="feature-icon"></span>
+            <h3>Adaptive Learning Path</h3>
+            <p>Experience a curriculum that evolves with you. Our system identifies your strengths and weaknesses to create a personalized learning path that maximizes your language acquisition efficiency.</p>
+          </div>
+          
+          <div class="feature-card">
+            <span class="feature-icon"></span>
+            <h3>Cultural Context</h3>
+            <p>Learn languages in their cultural context with region-specific expressions, idioms, and social nuances. Understand not just the words, but the culture behind the language.</p>
+          </div>
+          
+          <div class="feature-card">
+            <span class="feature-icon"></span>
+            <h3>Fast & Efficient</h3>
+            <p>Achieve fluency faster with our scientifically-backed learning methodology. Spend less time on repetitive drills and more time on meaningful language practice.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section class="tech-stack">
-      <h2>Built with Modern Technology</h2>
-      <div class="tech-grid">
-        <div class="tech-item">
-          <h4>React + TypeScript</h4>
-          <p>Robust, type-safe frontend development with the latest React features</p>
+    <!-- Languages Section -->
+    <section class="languages-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Supported Languages</h2>
+          <p>Currently available languages with more being added regularly</p>
         </div>
-        <div class="tech-item">
-          <h4>Vite Development</h4>
-          <p>Lightning-fast development with Hot Module Replacement (HMR)</p>
+        
+        <div class="languages-grid">
+          <div class="language-card">
+            <span class="language-flag"></span>
+            <h4>English</h4>
+            <p>Global Language</p>
+          </div>
+          
+          <div class="language-card">
+            <span class="language-flag"></span>
+            <h4>Hindi</h4>
+            <p>500M+ Speakers</p>
+          </div>
+          
+          <div class="language-card">
+            <span class="language-flag"></span>
+            <h4>Italian</h4>
+            <p>Romance Language</p>
+          </div>
+          
+          <div class="language-card">
+            <span class="language-flag"></span>
+            <h4>Bengali</h4>
+            <p>300M+ Speakers</p>
+          </div>
+          
+          <div class="language-card" style="border: 2px dashed #43b649; background: #f0fff0;">
+            <span class="language-flag"></span>
+            <h4>More Coming</h4>
+            <p>Stay Tuned!</p>
+          </div>
         </div>
-        <div class="tech-item">
-          <h4>ESLint Integration</h4>
-          <p>Professional code quality with type-aware lint rules and best practices</p>
-        </div>
-        <div class="tech-item">
-          <h4>Advanced Plugins</h4>
-          <p>Enhanced with @vitejs/plugin-react and react-swc for optimal performance</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Download Section -->
-    <section class="download-section">
-      <div class="download-container">
-        <div class="mascot-announcement">
-          🐸📢
-        </div>
-        <h2 class="download-title">System Requirements</h2>
-        <p class="download-subtitle">LangQuest runs smoothly on Windows 10 and later versions</p>
-        <div style="text-align: left; max-width: 400px; margin: 0 auto;">
-          <p><strong>✅ Operating System:</strong> Windows 10/11</p>
-          <p><strong>✅ Memory:</strong> 4GB RAM minimum</p>
-          <p><strong>✅ Storage:</strong> 500MB free space</p>
-          <p><strong>✅ Internet:</strong> Required for AI features</p>
-        </div>
-        <br>
-        <a class="btn-primary" href="langquest 0.0.0.exe" download>
-          � Download Again
-        </a>
       </div>
     </section>
   </main>
 
-  <!-- Floating Mascot -->
-  <div class="floating-mascot" title="Hi! I'm your LangQuest companion! 🐸">
-    🐸
-  </div>
+  <!-- Floating Mascot Removed -->
 
   <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 LangQuest. Master Any Language Naturally.</p>
-      <p>Built with React, TypeScript, and Vite for the best learning experience.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>LangQuest</h4>
+          <p>&copy; 2025 LangQuest. Master Any Language Naturally.</p>
+          <p>Empowering learners worldwide with AI-driven language education.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Technology</h4>
+          <p>Built with React, TypeScript, and Vite</p>
+          <p>Powered by advanced AI and machine learning</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Support</h4>
+          <p>Windows 10/11 Compatible</p>
+          <p>Continuous updates and improvements</p>
+        </div>
+      </div>
     </div>
   </footer>
 </body>
