@@ -10,31 +10,25 @@ LangQuest is an innovative AI-powered language learning application that revolut
 
 ## 🌟 Key Features
 
-### 🐸 **40+ Languages Supported**
-- Learn from **Spanish to Japanese**, **French to Arabic**
-- Native-level conversation support across diverse language families
-- Comprehensive language coverage for global learners
-- Regular updates with new language additions
-
-### 🤖 **AI-Powered Learning Engine**
+###  **AI-Powered Learning Engine**
 - **Smart learning algorithms** that adapt to your unique pace and style
 - **Personalized lessons** tailored to your proficiency level
 - **Real-time feedback** for immediate improvement
 - Advanced natural language processing for authentic conversations
 
-### 👥 **Thriving Community**
+###  **Thriving Community**
 - Join **5+ million users** worldwide
 - Practice with real-world scenarios
 - Build confidence through community interaction
 - Access to peer learning and support networks
 
-### 📚 **Interactive Learning Experience**
+###  **Interactive Learning Experience**
 - **Immersive conversation scenarios** designed by language experts
 - Gamified learning approach for sustained engagement
 - Progress tracking and achievement systems
 - Multimedia content integration
 
-## 🛠️ Technical Excellence
+## Technical Excellence
 
 LangQuest is built with modern, industry-leading technologies ensuring optimal performance and user experience:
 
